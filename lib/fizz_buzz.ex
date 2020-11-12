@@ -11,9 +11,9 @@ defmodule FizzBuzz do
       |> String.split(",")
       |> Enum.map(&convert_and_evaluate_numbers/1)
 
-    {:ok, result}  
+    {:ok, result}
   end
-  
+
   defp handle_file_read({:error, reason}), do: {:error, "Error reading the file: #{reason}"}
 
   defp convert_and_evaluate_numbers(value) do
